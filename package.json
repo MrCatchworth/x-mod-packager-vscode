@@ -10,14 +10,29 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onCommand:xmodpackager.build",
+		"onCommand:xmodpackager.clean",
+		"onCommand:xmodpackager.import",
+		"onCommand:xmodpackager.init"
 	],
-	"main": "./out/extension.js",
+	"main": "./out/main.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "xmodpackager.build",
+				"title": "X Mod Packager: Build"
+			},
+			{
+				"command": "xmodpackager.clean",
+				"title": "X Mod Packager: Clean output directory"
+			},
+			{
+				"command": "xmodpackager.import",
+				"title": "X Mod Packager: Import config"
+			},
+			{
+				"command": "xmodpackager.init",
+				"title": "X Mod Packager: Init new config"
 			}
 		]
 	},

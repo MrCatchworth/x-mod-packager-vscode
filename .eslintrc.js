@@ -5,7 +5,6 @@ module.exports = {
         'es6': true
     },
     'extends': [
-        'eslint:recommended',
         'plugin:@typescript-eslint/eslint-recommended'
     ],
     'globals': {
@@ -14,7 +13,11 @@ module.exports = {
     },
     'parser': '@typescript-eslint/parser',
     'parserOptions': {
-        'ecmaVersion': 2018
+        'ecmaVersion': 2018,
+        'sourceType': 'module',
+        'ecmaFeatures': {
+            'modules': true
+        }
     },
     'plugins': [
         '@typescript-eslint'
@@ -24,13 +27,9 @@ module.exports = {
             'error',
             4
         ],
-        'linebreak-style': [
-            'error',
-            'unix'
-        ],
         'quotes': [
             'error',
-            'single'
+            'double'
         ],
         'semi': [
             'error',
