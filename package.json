@@ -6,6 +6,10 @@
 	"engines": {
 		"vscode": "^1.37.0"
     },
+    "repository": {
+        "type": "github",
+        "url": "https://github.com/MrCatchworth/x-mod-packager-vscode"
+    },
     "publisher": "JohnnyJingle",
 	"categories": [
 		"Other"
