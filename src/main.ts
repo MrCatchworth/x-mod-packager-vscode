@@ -10,9 +10,15 @@ interface CommandContext {
 }
 
 function callBinary(verb: string, commandLineArgs: string[], workspacePath: string) {
+    commandOutputChannel.clear();
+
+    commandOutputChannel.appendLine(`Executing command "${verb}" ...`);
+    commandOutputChannel.appendLine("");
+
     const buildProcess = child_process.spawn("dotnet", [
         binaryPath,
         verb,
+        "--verbose",
         ...commandLineArgs
     ], {
         cwd: workspacePath
